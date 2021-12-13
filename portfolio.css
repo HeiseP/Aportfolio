@@ -1,0 +1,224 @@
+/* initial CSS */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+nav{
+  background: dimgrey;
+  grid-area: nav;
+}
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 15px;
+
+}
+li{
+margin-bottom: 15px;
+display: block;
+justify-content: center;
+border: solid 1px black;
+border-radius: 45px;
+text-align: center;
+}
+
+main{ background: ghostwhite;
+  grid-area: main;
+  padding: 10px;
+}
+
+form {
+  display: block;
+  margin-top: auto;
+}
+
+footer{
+  background: #343434;
+  color: ghostwhite;
+  grid-area: footer;
+  text-align: center;
+}
+address {
+  display: block;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: ghostwhite;
+  display: block;
+}
+li a:hover{
+  background-color: #343434;
+  color: ghostwhite;
+}
+/* Classes */
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center
+
+}
+.forsidetekst {
+  text-align: center;
+  margin-top: 50px;
+  line-height: 30px;
+}
+
+.flexitem {
+  width: 30%;
+  height: 30%;
+  margin: 10px;
+
+}
+
+.projektimg {
+  max-width: 100%;
+  height: auto;
+
+}
+.flexitem1 {
+  border: 1px solid black;
+  width: 40%;
+  height: 30%;
+  margin: 30px;
+  background-color: #EDE0D4;
+  padding: 30px;
+  text-align: center;
+
+}
+.projektimg1 {
+  max-width: 100%;
+  height: auto;
+  margin: 0px;
+}
+
+.container {
+  display:grid;
+  height:100vh;
+  grid-template-rows: 3fr 0.5fr;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr;
+  grid-template-areas:
+  "nav main content"
+  "footer footer footer";
+}
+.container2 {
+  display:grid;
+  height:100vh;
+  grid-template-rows: 3fr 0.5fr;
+  grid-template-columns: 0.5fr 3fr;
+  grid-template-areas:
+  "nav main content"
+  "footer footer footer";
+}
+.logo{
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+.tekst {
+  word-spacing: 4px;
+}
+.projekttekst{
+  text-align: center;
+}
+
+
+.content {
+ background: ghostwhite;
+  grid-area: content;
+  text-align: center;
+  margin-top: 0px;
+  line-height: 30px;
+}
+.coverimg {
+  max-width: 99%;
+  height: auto;
+margin-left: auto;
+margin-right: auto;
+border: 3px solid lightgrey;
+}
+.img-container {
+margin-top: 50px;
+
+}
+
+
+.gridkontakt {
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 2%;
+}
+.kontaktform {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.navn{
+grid-column: 1/2;
+grid-row: 1/2;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 600;
+color: black;
+text-align: left;
+width: 94%;
+border: solid#D88B57 2px;
+}
+.email {
+grid-column: 1/2;
+grid-row: 1/2;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 600;
+color: black;
+text-align: left;
+width: 94%;
+border: solid#D88B57 2px;
+}
+.besked {
+grid-column: 1/2;
+grid-row: 1/2;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 600;
+color: black;
+text-align: left;
+width: 94%;
+border: solid#D88B57 2px;
+}
+.send {
+grid-column: 1/2;
+grid-row: 1/2;
+display: block;
+margin: 0 auto;
+background-color: #D88B57;
+border: solid#D88B57 2px;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 550px) {
+  .container, .container2{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content"
+      "footer";
+}
+}
